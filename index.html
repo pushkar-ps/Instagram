@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="left">
+            <img src="/assets/mobile-img.webp" alt="" height="100%">
+        </div>
+        <div class="right">
+            <div class="log-form">
+                <form action="" id="ig-form">
+                    <img src="/assets/instagram-logo.png" alt="" width="200">
+                    <div class="login-input">
+                        <input type="text" placeholder="Phone number, usrename or email address" id="input">
+                        <div class="passwordBox">
+                            <input type="password" placeholder="Password" id="password">
+                            <p id="showBtn">Show</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn">Log in</button>
+                    <img src="" alt="">
+
+                    <p id="or">OR</p>
+
+                    <div class="facebook">
+                        <a href="/work/facebook.html"><i class="fa-brands fa-square-facebook"></i>Login with
+                            Facebook</a>
+                        <a href="" id="forget">Forgotten your password?</a>
+                    </div>
+                </form>
+
+                <div class="singup">
+                    <p>Don't have an account?</p><a href="">Sign up</a>
+                </div>
+
+                <div class="getTheApp">
+                    <p>Get the app.</p>
+                    <div class="getimage">
+                        <img src="/assets/playstore.png" alt="" width="140">
+                        <img src="/assets/microsoft.png" alt="" width="110">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="tags">
+            <a href="https://about.meta.com/" target="_blank">Meta</a>
+            <a href="https://about.instagram.com/" target="_blank">About</a>
+            <a href="https://about.instagram.com/blog" target="_blank">Blog</a>
+            <a href="https://about.instagram.com/about-us/careers" target="_blank">Jobs</a>
+            <a href="https://help.instagram.com/" target="_blank">Help</a>
+            <a href="https://developers.facebook.com/docs/instagram" target="_blank">API</a>
+            <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect"
+                target="_blank">Privacy</a>
+            <a href="https://help.instagram.com/581066165581870/" target="_blank">Terms</a>
+            <a href="https://www.instagram.com/explore/locations/" target="_blank">Location</a>
+            <a href="https://www.instagram.com/web/lite/" target="_blank">Instagram Lite</a>
+            <a href="https://www.threads.net/" target="_blank">Threads</a>
+            <a href="www.facebook.com/help/instagram/261704639352628" target="_blank">Contact uploading and
+                non-users</a>
+            <a href="https://about.meta.com/technologies/meta-verified/" target="_blank">Meta Verified</a>
+        </div>
+
+        <div class="copyright">
+            <select name="">
+                <option value="English (UK)">English (UK)</option>
+                <option value="">Hindi</option>
+                <option value="">Urdu</option>
+                <option value="">Bangali</option>
+                <option value="">Asameese</option>
+                <option value="">Bengali</option>
+                <option value="">Gujarati</option>
+                <option value="">Kannada</option>
+                <option value="">Malayalam</option>
+                <option value="">Manipuri</option>
+                <option value="">Marathi</option>
+                <option value="">Punjabi</option>
+                <option value="">Tamil</option>
+                <option value="">Telugu</option>
+                <option value="">Sanskrit</option>
+            </select>
+
+            <p> &#169 2024 Instagram from Meta</p>
+
+            <a href="https://www.instagram.com/pushkar_ps_/">Made by Pushkar Ps</a>
+        </div>
+    </footer>
+    <script>
+        const password = document.querySelector("#password");
+        const showBtn = document.querySelector("#showBtn");
+        const input = document.querySelector("#input");
+        const submitBtn = document.querySelector("#submitBtn");
+
+
+        submitBtn.addEventListener("click", function () {
+            if (input.value == "pushkar_ps_" && password.value == "pushkar_ps_") {
+                window.open("/work/home.html");
+            } else {
+                input.style.borderColor = "red";
+                password.style.borderColor = "red";
+
+                confirm("Please Enter Your Valid Username or Password")
+
+            }
+        });
+
+
+
+
+        showBtn.onclick = function () {
+            if (password.type == "password") {
+                password.type = "text";
+                showBtn.innerHTML = "Hide";
+                showBtn.style.color = "#909090";
+            } else {
+                password.type = "password";
+                showBtn.innerHTML = "Show";
+            }
+        };
+    </script>
+</body>
+
+</html>

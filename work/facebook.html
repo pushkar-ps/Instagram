@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/Facebook-Logosu.png" type="image/x-icon">
+    <title>Facebook - लॉग इन या साइन अप करें</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="media.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="facebook-body">
+    <div class="nav">
+        <img src="/assets/Facebook-logo.png" alt="" width="200">
+        <button>नया अकाउंट बनाएँ</button>
+    </div>
+
+    <div class="main">
+        <div class="card">
+            <p><span>Facebook</span> में लॉग इन करें</p>
+            <form action="">
+                <input type="text" placeholder="Mobile number or email address" name="number" required autofocus>
+                <div class="password-box">
+                    <input type="password" placeholder="Facebook password" id="passwordInput" name="password" required>
+                    <img src="/assets/eye2.png" id="eyeIcon">
+                </div>
+
+                <button type="submit" id="btn">Login</button>
+            </form>
+            <div class="fb-link">
+                <a href="">अकाउंट याद नहीं है? </a>
+                <a href="">Facebook के लिए साइन अप करें</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="language-box">
+            <div class="lengu">
+                <p>हिन्दी</p>
+                <p>اردو</p>
+                <p>বাংলা</p>
+                <p>English (UK)</p>
+            </div>
+            <div class="lengu">
+                <p>मराठी</p>
+                <p>ਪੰਜਾਬੀ</p>
+                <p>ગુજરાતી</p>
+                <p>తెలుగు</p>
+            </div>
+        </div>
+
+        <p>Meta &#169 2024</p>
+    </div>
+
+    <script>
+        const passwordInput = document.querySelector("#passwordInput");
+        const eye = document.querySelector("#eyeIcon");
+
+        eye.onclick = function () {
+            if (passwordInput.type == "password") {
+                passwordInput.type = "text"
+                eye.src = "/assets/eye.png"
+            } else {
+                passwordInput.type = "password"
+                eye.src = "/assets/eye2.png"
+            }
+        };
+    </script>
+</body>
+
+</html>
